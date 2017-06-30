@@ -1,0 +1,78 @@
+body{
+	margin-bottom: 0px;
+}
+.hero{
+	height: calc(100vh - 75px);
+	width: 100vw;
+	background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../images/hero.jpg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-attachment: fixed;
+}
+.herotext{
+	text-align: center;
+	color: white;
+	width: 1000px;
+	font-weight: 100;
+	font-size: 25px;
+	font-family: 'Oswald', sans-serif;
+
+}
+.herotext h1{
+	font-size: 60px;
+}
+#autocomplete{
+	position: relative;
+	top:0;
+	left:0;
+	z-index: 0;
+	width: 500px;
+	height: 50px;
+	border-radius: 5px;
+	border: 0;
+	font-size: 26px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: blackf;
+}
+
+.stats{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	margin: 10%;
+}
+.stats div{
+	width: 400px;
+}
+.stats i{
+	font-size: 50px;
+}
+.stats b{
+	color: #FF69B4;
+	font-weight: bold;
+}
+.stats .button{
+	background-color: #FF69B4;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
+	font-weight: 100;
+	margin-left: 20px;
+	padding: 10px; 
+}

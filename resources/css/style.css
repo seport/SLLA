@@ -1,0 +1,136 @@
+html,body{
+	margin:0;
+	padding:0;
+}
+body{
+	display: flex;
+	flex-flow: row wrap;
+	font-family: arial;
+	margin-bottom: 50px;
+}
+.navigation{
+	background-color: black;
+	color: white;
+	flex: 100% 1;
+	height: 75px;
+	padding-left: 100px;
+	padding-right: 100px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.logo{
+	background-image: url('../images/favicon.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 50px;
+	margin-top: 10px;
+	filter: invert(100%);
+}
+.links{
+	font-size: 30px;
+	line-height: 10px;
+	font-weight: 100;
+}
+.links li a{
+	color: white;
+	text-decoration: none;
+}
+.navigation ul li{
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+	margin-right: 10px;
+}
+.bubble{
+	position: absolute;
+	right: 100px;
+	color: white;
+	background-color: #FF69B4;
+	border-radius: 10px;
+	height: 50px;
+	width: 100px;
+	padding: 10px;
+	z-index:100;
+}
+.bubble:before{
+	content:"";
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	left:50%;
+	top:-40px;
+	border-top: 20px solid rgba(0,0,0,0);
+	border-left: 20px solid rgba(0,0,0,0);
+	border-bottom: 20px solid rgba(0,0,0,0);
+	border-bottom: 20px solid #FF69B4;
+}
+.closebubble{
+	float: right;
+	cursor: pointer;
+}
+.content{
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+}
+h1{
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+}
+.highlighted{
+	background-color: white;
+}
+.highlighted div{
+	background-color: #fcf8e3;
+}
+#map {
+	width: 100%;
+	height: 400px;
+	background-color: grey;
+}
+#autocomplete{
+	position: absolute;
+	top: 85px;
+	left: 300px;
+	width: calc(100vw - 600px);
+	height: 25px;
+	z-index: 100;
+}
+.calendar a{
+	color: black;
+	text-decoration: none;
+}
+
+.alerts{
+   position: fixed;
+   top:50px;
+   left:50%;
+   transform: translateX(-50%);
+}
+.alert{
+   width:300px;
+   margin:auto;
+   border-radius: 4px;
+   border: 1px solid rgba(0,0,0,0);
+   text-align: center;
+   margin-top: 10px;
+   position: relative;
+}
+.alert.success{
+   background-color: #dff0d8;
+   border-color: #d6e9c6;
+   color: #3c763d;
+}
+.alert.failure{
+   background-color: #f2dede;
+   border-color: #ebccd1;
+   color: #a94442;
+}
+.closealert{
+   cursor: pointer;
+   float:right;
+   position: absolute;
+   top:0;
+   right:0;
+}

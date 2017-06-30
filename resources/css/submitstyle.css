@@ -1,0 +1,57 @@
+.fbLink{
+	height:35px;
+	width:500px;
+	padding-right:100px;
+	border:2px solid #FF69B4;
+	border-radius: 5px;
+	font-size:20px;
+}
+.fbLink:disabled{
+	border: 2px solid #cccccc;
+}
+.submitbutton{
+	text-align: center;
+	height:37px;
+	width:100px;
+	margin-left:-102px;
+	background: #FF69B4;
+	color: white;
+	border: 0px;
+	border-top-right-radius: 1px;
+	border-bottom-right-radius: 1px;
+	font-size:20px;
+	display: inline-block;
+	cursor: pointer;
+}
+.submitbutton:disabled {
+    background: #cccccc;
+}
+.alert{
+	width:300px;
+	margin:auto;
+	border-radius: 4px;
+	border: 1px solid rgba(0,0,0,0);
+	text-align: center;
+	margin-top: 10px;
+	position: relative;
+}
+.alert.success{
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #3c763d;
+}
+.alert.failure{
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	color: #a94442;
+}
+.closealert{
+	cursor: pointer;
+	float:right;
+	position: absolute;
+	top:0;
+	right:0;
+}
+form{
+	text-align: center;
+}
