@@ -11,3 +11,7 @@ Want to contribute? We have [Trello](https://trello.com/stayloudla)! Ask for an 
 
 ## Hosting locally
 `php -S localhost:8000`
+
+##Contributing
+Check out our public [Trello Board](https://trello.com/b/jYpP8ZTg/stay-loud-la)
+Pick up tasks in the `To Do` and let us know to update!
