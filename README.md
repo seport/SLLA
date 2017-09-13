@@ -15,3 +15,31 @@ Want to contribute? We have [Trello](https://trello.com/stayloudla)! Ask for an 
 ## Contributing
 Check out our public [Trello Board](https://trello.com/b/jYpP8ZTg/stay-loud-la)
 Pick up tasks in the `To Do` and let us know to update!
+
+## Schema
+
+**Users**
+
+_id int(11) auto_increment
+
+user text
+
+pass text
+
+level int(11)
+
+iv text
+
+**Calendar**
+
+_id int(11) auto_increment
+
+fb_id bigint(15)
+
+published tinyint(1)
+
+startTime datetime
+
+lat double
+
+lng double
