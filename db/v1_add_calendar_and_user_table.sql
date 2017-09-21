@@ -21,5 +21,9 @@ CREATE TABLE `users` (
   PRIMARY KEY  (`_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
+/* Creating a default admin user with login:
+    username: guest
+    password: password
+*/
 INSERT INTO `users` (`_id`, `user`, `pass`, `level`, `iv`) VALUES
-(1, 'guest', 'insert_password_here', 0, 'insert_iv_here');
+(1, 'guest', 'ZUdmUHp5Q2lwRXVXVWVGWmNaai9kdz09', 0, '82faf16c85b154d6');
