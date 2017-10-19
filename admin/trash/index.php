@@ -8,7 +8,7 @@
 <div style="width:1000px;margin:auto;">
 <div class="alerts">
 </div>
-<p><a href="<? echo $site_path_var ?>admin">Back to moderation queue</a></p>
+<p><a href="<?php echo $site_path_var ?>admin">Back to moderation queue</a></p>
 <h1>Trash</h1>
 <div class="events">
    <p class="empty">Loading...</p>

@@ -28,16 +28,16 @@
 	</div>
 	<div style="background:black; margin:0;padding-top:10%;padding-bottom:10%">
 		<div class="stats" style="margin-top:0;margin-bottom:0">
-			<a href="<? echo $site_path_var ?>calendar" class="button">Calendar of Protests &rarr;</a>
-			<a href="<? echo $site_path_var ?>submit" class="button">Submit a Protest &rarr;</a>
+			<a href="<?php echo $site_path_var ?>calendar" class="button">Calendar of Protests &rarr;</a>
+			<a href="<?php echo $site_path_var ?>submit" class="button">Submit a Protest &rarr;</a>
 			<a href="https://www.facebook.com/groups/1203067669814957/?ref=br_tf&qsefr=1" target="_blank" class="button">Check out the Facebook Group &rarr;</a>
 		</div>
 	</div>
 </div>
 <?php include "scripts.php"; ?>
 
-<script src="<? echo $site_path_var ?>resources/scripts/autocomplete.js"></script>
-<script src="<? echo $site_path_var ?>resources/scripts/initmap.js"></script>
+<script src="<?php echo $site_path_var ?>resources/scripts/autocomplete.js"></script>
+<script src="<?php echo $site_path_var ?>resources/scripts/initmap.js"></script>
 <script async defer 
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQu5em7L8CGjTmAHxQCOP8S7N-KHGpKNM&libraries=places&callback=initMap"></script>
 
