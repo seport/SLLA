@@ -9,8 +9,8 @@ include '../session.php';
 <?php include '../header.php'; ?>
 
 <div class="content">
-<p>Logged in as <?php echo $_SESSION['user']; ?>. <a href="/admin/logout">Log out?</a></p>
-<p><a href="/admin/trash">View Deleted Events</a></p>
+<p>Logged in as <?php echo $_SESSION['user']; ?>. <a href="<? echo $site_path_var ?>admin/logout">Log out?</a></p>
+<p><a href="<? echo $site_path_var ?>admin/trash">View Deleted Events</a></p>
 <h1>Moderate Suggested Event<span class="hiddenbutton">s</span></h1>
 <div class="calendar">
 	<p class="noresults">Loading...</p>

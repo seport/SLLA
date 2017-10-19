@@ -26,4 +26,4 @@ CREATE TABLE `users` (
     password: password
 */
 INSERT INTO `users` (`_id`, `user`, `pass`, `level`, `iv`) VALUES
-(1, 'guest', 'ZUdmUHp5Q2lwRXVXVWVGWmNaai9kdz09', 0, '82faf16c85b154d6');
+(1, 'guest', 'bXEzVHp2N0svMi9rWktSMTFIU3BDQT09', 0, '82faf16c85b154d6');
