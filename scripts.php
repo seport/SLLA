@@ -3,4 +3,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.auto.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js"></script>
 
-<script src="<? echo $site_path_var ?>/resources/scripts/script.js"></script>
+<script src="<?php echo $site_path_var ?>/resources/scripts/script.js"></script>
