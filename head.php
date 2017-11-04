@@ -1,6 +1,7 @@
 <?php
     include 'env.php';
     $site_path_var = $_ENV["ROOT_FOLDER"];
+    echo $site_path_var;
 ?>
 <!DOCTYPE html>
 <html>

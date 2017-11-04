@@ -1,7 +1,7 @@
 <?php include "head.php"; ?>
 
 <link rel="stylesheet" type="text/css" href="resources/css/indexstyle.css"/>
-
+<link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
 <?php include "header.php"; ?>
 
 <div class="content">
@@ -38,7 +38,7 @@
 
 <script src="<?php echo $site_path_var ?>resources/scripts/autocomplete.js"></script>
 <script src="<?php echo $site_path_var ?>resources/scripts/initmap.js"></script>
-<script async defer 
+<script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQu5em7L8CGjTmAHxQCOP8S7N-KHGpKNM&libraries=places&callback=initMap"></script>
 
 <?php include "footer.php"; ?>
