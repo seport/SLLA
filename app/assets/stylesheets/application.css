@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+ .stats{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	margin: 10%;
+}
+.stats div{
+	width: 400px;
+}
+.stats i{
+	font-size: 50px;
+}
+.stats b{
+	color: #FF69B4;
+	font-weight: bold;
+}
+.stats .button{
+	background-color: #FF69B4;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
+	font-weight: 100;
+	margin-left: 20px;
+	padding: 10px;
+}
