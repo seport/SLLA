@@ -1,5 +1,5 @@
-
-<div class="navigation">
+<body>
+<!-- <div class="navigation">
 <%= image_tag("logo.jpg", :alt => "SLLA Logo", :class => "logo") %>
 <div class="links">
 	<ul>
@@ -12,13 +12,45 @@
 	<ul>
 		<li><%= link_to image_tag('github.png'), 'https://github.com/seport/SLLA', target: '_blank', :style => "height:50px;width:50px;filter: invert(100%);" %></li>
 		<li><%= link_to image_tag('twitter.png'),'https://twitter.com/StayLoudLA', target: '_blank', :style => "height:50px;width:50px;filter: invert(100%);" %></li>
+		<li><%= link_to image_tag('facebook.png'), 'https://www.facebook.com/groups/1203067669814957/?ref=br_tf&qsefr=1', target: '_blank', :style=> "height:50px;width:50px;filter: invert(100%);" %></li>
 </div>
-</div>
-<div style="background:black; margin:0;padding-top:10%;padding-bottom:10%">
-  <div class="stats" style="margin-top:0;margin-bottom:0">
+  <div class="stats">
     <%= link_to('Calendar of Protests', root_path, :class => "button") %>
     <%= link_to('Submit a Protest', root_path, :class => "button") %>
     <%= link_to('Check out the Facebook Group', 'https://www.facebook.com/groups/1203067669814957/?ref=br_tf&qsefr=1', target: '_blank', :class => "button") %>
-  </div>
-</div>
-<h1>Welcome to Stayloud LA!</h1>
+  </div> -->
+<div class="bubble">
+		<span class="closebubble">x</span>
+		Check out the facebook group!
+	</div>
+	<div class="content">
+		<div class="hero">
+			<div class="herotext">
+				<h1>Find A Protest Near You</h1>
+				<input id="autocomplete">
+			</div>
+		</div>
+		<div class="stats">
+			<div>
+				<center><i class="fa fa-users" aria-hidden="true"></i></center>
+				<p><b>750,000</b> people showed up for the Women's March downtown.</p>
+			</div>
+			<div>
+				<center><i class="fa fa-plane" aria-hidden="true"></i></center>
+				<p>An estimated <b>7,000+</b> showed up at LAX the next weekend to speak up against Trump's Muslim Ban.</p>
+			</div>
+		</div>
+		<div style="background:linear-gradient(rgba(127,52,90,0.75),rgba(127,52,90,0.75)),url('resources/images/lamap.png');background-size:cover;background-position:center;">
+			<div style="width:1000px; margin: auto; padding-top: calc(40vh - 100px);padding-bottom: calc(40vh - 100px); color:white;font-size:18px;">
+				<p>LA's participation in these protests against the Trump administration's unconstitutional policies have <b style="color:#FF69B4;background:white;">proven all of the stereotypes about this city wrong</b>. LA is filled with passionate and engaged activists who have inspired us to keep the momentum going and apply as much pressure as we can on the new administration. This group is here for all of us to share ideas on how to continue to stay active in this fight. Let's stay loud, LA!</p>
+			</div>
+		</div>
+		<div style="background:black; margin:0;padding-top:10%;padding-bottom:10%">
+			<div class="stats" style="margin-top:0;margin-bottom:0">
+				<a href="<?php echo $site_path_var ?>calendar" class="button">Calendar of Protests &rarr;</a>
+				<a href="<?php echo $site_path_var ?>submit" class="button">Submit a Protest &rarr;</a>
+				<a href="https://www.facebook.com/groups/1203067669814957/?ref=br_tf&qsefr=1" target="_blank" class="button">Check out the Facebook Group &rarr;</a>
+			</div>
+		</div>
+	</div>
+</body>

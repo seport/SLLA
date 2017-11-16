@@ -1,0 +1,20 @@
+<nav class="navigation">
+<%= image_tag("logo.jpg", :alt => "SLLA Logo", :class => "logo") %>
+<nav class="links">
+    <%= link_to('Calendar', root_path) %>
+    <%= link_to('Submit', root_path) %>
+    <%= link_to('Join', 'https://www.facebook.com/groups/1203067669814957/?ref=br_tf&qsefr=1', target: '_blank') %>
+</nav>
+<nav class="social">
+	<ul>
+		<%= link_to image_tag('github.png'), 'https://github.com/seport/SLLA', target: '_blank', :style => "height:50px;width:50px;filter: invert(100%);" %>
+		<%= link_to image_tag('twitter.png'),'https://twitter.com/StayLoudLA', target: '_blank', :style => "height:50px;width:50px;filter: invert(100%);" %>
+		<%= link_to image_tag('facebook.png'), 'https://www.facebook.com/groups/1203067669814957/?ref=br_tf&qsefr=1', target: '_blank', :style => "height:50px;width:50px;filter: invert(100%);" %>
+  </ul>
+</nav>
+  <nav class="stats">
+    <%= link_to('Calendar of Protests', root_path, :class => "button") %>
+    <%= link_to('Submit a Protest', root_path, :class => "button") %>
+    <%= link_to('Check out the Facebook Group', 'https://www.facebook.com/groups/1203067669814957/?ref=br_tf&qsefr=1', target: '_blank', :class => "button") %>
+  </nav>
+</nav>
