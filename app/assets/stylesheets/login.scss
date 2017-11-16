@@ -1,0 +1,21 @@
+#login-page  {
+  label {
+    width:100px;
+    display: inline-block;
+    text-align: right;
+  }
+
+  div {
+    margin:auto;
+    width:300px;
+  }
+
+  .alert.failure.pre {
+    display:none;
+  }
+
+  form {
+    margin:auto;
+    width:300px;
+  }
+}

@@ -1,0 +1,21 @@
+<section id="login-page">
+  <div>
+    <h1>Log In</h1>
+    <div class="alert failure pre">
+       <p><span class="closealert">X</span><span class="message">No such user found.</span></p>
+    </div>
+    <%= form_with model: @user do |f| %>
+      <p>
+        <%= f.label :user %>
+        <%= f.text_field :email %>
+      </p>
+      <p>
+        <%= f.label :password %>
+        <%= f.text_field :password %>
+      </p>
+      <p>
+        <center><%= f.submit "Login" %></center>
+      </p>
+    <% end %>
+  </div>
+</section>
