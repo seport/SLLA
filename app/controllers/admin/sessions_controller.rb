@@ -1,4 +1,6 @@
 class Admin::SessionsController < ApplicationController
-  def new
+  def new; end
+
+  def create
   end
 end

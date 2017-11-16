@@ -4,7 +4,7 @@
     <div class="alert failure pre">
        <p><span class="closealert">X</span><span class="message">No such user found.</span></p>
     </div>
-    <%= form_with model: @user do |f| %>
+    <%= form_with url: admin_login_path do |f| %>
       <p>
         <%= f.label :user %>
         <%= f.text_field :email %>
