@@ -4,7 +4,7 @@ describe Admin::SessionsController do
 
   describe "POST create" do
     it "should assign a user" do
-      @user = User.new(email: "example@example.com", password: "pw", role: "admin")
+      @user = User.new(email: "example@example.com", password: "pw", admin: true)
       post :create
       expect(assigns(:user)).to be
     end
