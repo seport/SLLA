@@ -1,0 +1,11 @@
+<h1>submit</h1>
+<% if @event.errors.any? %>
+    oops, try again!
+<%end%>
+<%= form_for @event, url: submit_path  do |f| %>
+  <%= f.text_field :fb_id %>
+  <%= f.submit "Submit" %>
+<% end %>
+
+
+ 
