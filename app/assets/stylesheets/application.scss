@@ -13,8 +13,8 @@
  *= require_tree .
  *= require_self
  */
-
-
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
  .stats{
 	display: flex;
@@ -64,7 +64,7 @@ body{
 	justify-content: space-between;
 }
 .logo{
-	background-image: url('../images/favicon.png');
+	background-image: 'assets/images/favicon.png';
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 50px;
@@ -76,24 +76,35 @@ body{
 	font-size: 30px;
 	line-height: 10px;
 	font-weight: 100;
+  display: inline-block;
+  height: 75px;
+  width: 328px;
+  margin-top: 30px;
 }
-.links li a{
+.links a{
 	color: white;
 	text-decoration: none;
 }
 .navigation ul li{
 	display: inline-block;
-	font-family: 'Oswald', sans-serif;
+	font-family: arial;
 	margin-right: 10px;
+}
+.social img{
+  height:65px;
+  width: 50px;
+  filter: invert(100%);
+  padding-top: 15px;
 }
 .bubble{
 	position: absolute;
+  top: 75px;
 	right: 100px;
 	color: white;
 	background-color: #FF69B4;
 	border-radius: 10px;
-	height: 50px;
-	width: 100px;
+	height: 70px;
+	width: 120px;
 	padding: 10px;
 	z-index:100;
 }
@@ -234,4 +245,50 @@ h1{
 }
 form{
 	text-align: center;
+}
+.hero{
+	height: calc(100vh - 75px);
+	width: 100vw;
+	background: url('hero.jpg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-attachment: fixed;
+}
+.herotext{
+	text-align: center;
+	color: white;
+	width: 1000px;
+	font-weight: 100;
+	font-size: 25px;
+	font-family: 'Oswald', sans-serif;
+
+}
+.herotext h1{
+	font-size: 60px;
+}
+#autocomplete{
+	position: relative;
+	top:0;
+	left:0;
+	z-index: 0;
+	width: 500px;
+	height: 50px;
+	border-radius: 5px;
+	border: 0;
+	font-size: 26px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: blackf;
 }
