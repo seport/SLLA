@@ -7,8 +7,7 @@ class Admin::SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to :root
     else
-      flash[:info] = 'Please enter valid login information'
-      render :new
+      render_login_error
     end
   end
 end

@@ -11,7 +11,29 @@
   }
 
   .alert.failure.pre {
+    background-color: #D05151;
+    opacity: 0.7;
+    border: 0.1px solid gray;
+    padding: 1px;
+    border-radius: 5px;
     display:none;
+
+    p {
+      margin: 1px;
+    }
+
+  }
+
+  .closealert {
+    margin-left: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .message {
+    float: right;
+    margin-right: 10px;
   }
 
   form {
