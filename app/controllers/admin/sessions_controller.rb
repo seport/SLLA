@@ -2,12 +2,12 @@ class Admin::SessionsController < ApplicationController
   def new; end
 
   def create
-    @user = User.find_by(email: params[:email])
-    if @user.nil?
-      flash[:info] = 'Please enter a valid email address'
-      render(:new) and return
+    byebug
+    if User.find_by(email: params[:email]).try(:authenticate, params[:password])
+      redirect_to :root
+    else
+      flash[:info] = 'Please enter valid login information'
+      render :new
     end
-    # if @user&.authenticate(params[:password])
-    # end
   end
 end
