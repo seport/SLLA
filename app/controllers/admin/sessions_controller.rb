@@ -2,8 +2,9 @@ class Admin::SessionsController < ApplicationController
   def new; end
 
   def create
-    byebug
-    if User.find_by(email: params[:email]).try(:authenticate, params[:password])
+    user = User.find_by(email: params[:email])
+    if user.try(:authenticate, params[:password])
+      session[:user_id] = user.id
       redirect_to :root
     else
       flash[:info] = 'Please enter valid login information'
