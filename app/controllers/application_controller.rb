@@ -7,6 +7,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def redirect_if_logged_in
+    redirect_to admin_path if logged_in?
+  end
+
   def require_admin_login
     redirect_to admin_login_path if !(logged_in? || admin?)
   end
