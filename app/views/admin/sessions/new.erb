@@ -1,0 +1,21 @@
+<section id="login-page">
+  <div>
+    <h1>Log In</h1>
+    <div class="alert failure pre">
+       <p><span class="closealert">X</span><span class="message">No such user found.</span></p>
+    </div>
+    <%= form_with url: admin_login_path do |f| %>
+      <p>
+        <%= f.label :user, 'Email' %>
+        <%= f.text_field :email %>
+      </p>
+      <p>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </p>
+      <p>
+        <center><%= f.submit "Log in" %></center>
+      </p>
+    <% end %>
+  </div>
+</section>
