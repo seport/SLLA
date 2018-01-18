@@ -21,4 +21,10 @@ ActiveRecord::Schema.define(version: 20171203211857) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  create_table "events", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "fb_id"
+  end
+
 end
