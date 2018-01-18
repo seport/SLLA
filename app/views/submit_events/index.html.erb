@@ -1,11 +1,22 @@
-<h1>submit</h1>
 <% if @event.errors.any? %>
-    oops, try again!
-<%end%>
+  <div class="alert failure pre">
+     <p>
+      <span class="closealert">X</span>
+      <span class="message">Oops! It looks like your link isn't formatted correctly. Make sure it's a valid link to a facebook event.</span>
+    </p>
+  </div>
+<% end %>
+
+<h1>Submit</h1>
+
+<p>Keeping this list of protests up to date is a community effort. Here's how you can help:</p>
+
+<ol>
+	<li>Copy and paste the facebook event link into the form below.</li>
+	<li>The event will appear in the list once a moderator has approved it.</li>
+</ol>
+
 <%= form_for @event, url: submit_path  do |f| %>
   <%= f.text_field :fb_id %>
   <%= f.submit "Submit" %>
 <% end %>
-
-
- 
