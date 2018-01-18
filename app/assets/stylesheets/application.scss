@@ -1,0 +1,304 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+ */
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+  @import "font-awesome-sprockets";
+  @import "font-awesome";
+
+
+ .stats{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	margin: 10%;
+}
+.stats div{
+	width: 400px;
+}
+.stats i{
+	font-size: 50px;
+}
+.stats b{
+	color: #FF69B4;
+	font-weight: bold;
+}
+.stats .button{
+	background-color: #FF69B4;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
+	font-weight: 100;
+	margin-left: 20px;
+	padding: 10px;
+}
+body{
+	margin:0;
+	padding:0;
+	display: flex;
+	flex-flow: row wrap;
+	font-family: arial;
+	margin-bottom: 50px;
+}
+.navigation{
+	background-color: black;
+	color: white;
+	flex: 100% 1;
+	height: 75px;
+	padding-left: 100px;
+	padding-right: 100px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+}
+.logo{
+	background-image: 'assets/images/favicon.png';
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 50px;
+	margin-top: 10px;
+	filter: invert(100%);
+}
+.links{
+	font-size: 30px;
+	line-height: 10px;
+	font-weight: 100;
+  display: inline-block;
+  height: 75px;
+  width: 328px;
+  margin-top: 30px;
+}
+.links a{
+	color: white;
+	text-decoration: none;
+  margin-right: 10px;
+}
+.navigation ul li{
+	display: inline-block;
+	font-family: arial;
+	margin-right: 10px;
+}
+.social img{
+  height:65px;
+  width: 50px;
+  filter: invert(100%);
+  padding-top: 15px;
+  margin-right: 10px;
+}
+.bubble{
+	position: absolute;
+  top: 75px;
+	right: 100px;
+	color: white;
+	background-color: #FF69B4;
+	border-radius: 10px;
+	height: 70px;
+	width: 120px;
+	padding: 10px;
+	z-index:100;
+}
+.bubble:before{
+	content:"";
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	left:50%;
+	top:-40px;
+	border-top: 20px solid rgba(0,0,0,0);
+	border-left: 20px solid rgba(0,0,0,0);
+	border-bottom: 20px solid rgba(0,0,0,0);
+	border-bottom: 20px solid #FF69B4;
+}
+.closebubble{
+	float: right;
+	cursor: pointer;
+}
+.content{
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+}
+h1{
+	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+}
+.highlighted{
+	background-color: white;
+}
+.highlighted div{
+	background-color: #fcf8e3;
+}
+#map {
+	width: 100%;
+	height: 400px;
+	background-color: grey;
+}
+#autocomplete{
+	position: absolute;
+	top: 85px;
+	left: 300px;
+	width: calc(100vw - 600px);
+	height: 25px;
+	z-index: 100;
+}
+.calendar a{
+	color: black;
+	text-decoration: none;
+}
+
+.alerts{
+   position: fixed;
+   top:50px;
+   left:50%;
+   transform: translateX(-50%);
+}
+.alert{
+   width:300px;
+   margin:auto;
+   border-radius: 4px;
+   border: 1px solid rgba(0,0,0,0);
+   text-align: center;
+   margin-top: 10px;
+   position: relative;
+}
+.alert.success{
+   background-color: #dff0d8;
+   border-color: #d6e9c6;
+   color: #3c763d;
+}
+.alert.failure{
+   background-color: #f2dede;
+   border-color: #ebccd1;
+   color: #a94442;
+}
+.closealert{
+   cursor: pointer;
+   float:right;
+   position: absolute;
+   top:0;
+   right:0;
+}
+.fbLink{
+	height:35px;
+	width:500px;
+	padding-right:100px;
+	border:2px solid #FF69B4;
+	border-radius: 5px;
+	font-size:20px;
+}
+.fbLink:disabled{
+	border: 2px solid #cccccc;
+}
+.submitbutton{
+	text-align: center;
+	height:37px;
+	width:100px;
+	margin-left:-102px;
+	background: #FF69B4;
+	color: white;
+	border: 0px;
+	border-top-right-radius: 1px;
+	border-bottom-right-radius: 1px;
+	font-size:20px;
+	display: inline-block;
+	cursor: pointer;
+}
+.submitbutton:disabled {
+    background: #cccccc;
+}
+.alert{
+	width:300px;
+	margin:auto;
+	border-radius: 4px;
+	border: 1px solid rgba(0,0,0,0);
+	text-align: center;
+	margin-top: 10px;
+	position: relative;
+}
+.alert.success{
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #3c763d;
+}
+.alert.failure{
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	color: #a94442;
+}
+.closealert{
+	cursor: pointer;
+	float:right;
+	position: absolute;
+	top:0;
+	right:0;
+}
+form{
+	text-align: center;
+}
+.hero{
+	height: calc(100vh - 75px);
+	width: 100vw;
+	background: url('hero.jpg'),linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-attachment: fixed;
+}
+.intel{
+  background: url('lamap.png'),linear-gradient(rgba(127,52,90,0.75),rgba(127,52,90,0.75));
+  background-size: cover;
+  background-position: center;
+}
+.herotext{
+	text-align: center;
+	color: white;
+	width: 1000px;
+	font-weight: 100;
+	font-size: 25px;
+	font-family: 'Oswald', sans-serif;
+
+}
+.herotext h1{
+	font-size: 60px;
+}
+#autocomplete{
+	position: relative;
+	top:0;
+	left:0;
+	z-index: 0;
+	width: 500px;
+	height: 50px;
+	border-radius: 5px;
+	border: 0;
+	font-size: 26px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: blackf;
+}
