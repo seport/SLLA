@@ -4,10 +4,6 @@ class Admin::SessionsController < ApplicationController
 
   def new; end
 
-  def index
-    render plain: "Hello World!"
-  end
-
   def create
     user = User.find_by(email: params[:email])
 
