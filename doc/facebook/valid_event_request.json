@@ -1,0 +1,35 @@
+
+{
+  "description": "The 10th annual LA Beer Festival follows last year's sold out event, and this year's promises to be even better. The event will feature dozens of international and domestic beers, over a dozen food trucks (food sold separately) as well as live entertainment.
+
+The 2018 LA Beer Festival will take place at LA Center Studios Studios from noon to 3pm and 5pm to 8pm. Admission is for only one session so make sure to coordinate with friends before buying your ticket. You GA tickets include unlimited beer tastings with food sold separately. Connoisseur's Ticket ($80) are limited and offer attendees exclusive air conditioned bathrooms, an indoor/outdoor event deck overlooking the event featuring limited beers/one-offs not available to general admission.
+
+For more information, visit www.labeerfest.la
+
+
+The LA Beer Festival's proceeds will benefit Noah's B-ark, Inc (tax ID 95-4677862) whose aim is to rescue dogs from shelters and find permanent homes for rescued pets. Proceeds from the event will towards funding food, shelter, and veterinary bills for rescued pets.
+
+****************************
+
+Before you buy your ticket, make sure you're buying tickets to the right session. Tickets can NOT be exchanged for another session or refunded once the event sells out or after 3/30/18. Event is strictly 21 and over. No exceptions. Event is RAIN OR SHINE!
+
+
+***************************",
+  "end_time": "2018-04-07T20:00:00-0700",
+  "name": "2018 LA Beer Fest",
+  "place": {
+    "name": "Los Angeles Center Studios",
+    "location": {
+      "city": "Los Angeles",
+      "country": "United States",
+      "latitude": 34.0550061,
+      "longitude": -118.2602802,
+      "state": "CA",
+      "street": "450 South Bixel Street",
+      "zip": "90017"
+    },
+    "id": "882227588593281"
+  },
+  "start_time": "2018-04-07T12:00:00-0700",
+  "id": "134236613927951"
+}
