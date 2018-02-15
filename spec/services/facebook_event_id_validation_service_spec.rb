@@ -4,17 +4,20 @@ describe FacebookEventIdValidationService do
   describe "#perform" do
     context "with valid id" do
       let(:successful_validation) do
-        validation_service = FacebookEventIdValidationService.new("graph.facebook.com/v2.12/1234567890")
-        validation_service.perform do
-          stub_request(:get, "/v2.12/1234567890")
-                     .with(headers: { Host: 'graph.facebook.com/v2.12/' })
-                     .to_return(body: '{"id": 1234567890, "name": "My Event"}')
-        end
+        validation_service = FacebookEventIdValidationService.new("https://graph.facebook.com/v2.12/1234567890")
+        stub_request(:get, "https://graph.facebook.com/v2.12/1234567890")
+                   .with(headers: {
+                      'Accept' => '*/*',
+                      'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+                      'Host' => 'graph.facebook.com',
+                      'User-Agent'=>'Ruby'
+                    }).to_return(status: 200, body: '{"id": 1234567890, "name": "My Event"}', headers: {})
+        validation_service.perform
       end
 
-      it "returns true" do
+      it "returns a response with an event name" do
         response = JSON.parse(successful_validation)
-        expect(response["id"]).to eq(1234567890)
+        expect(response['name']).to eq('My Event')
       end
     end
 

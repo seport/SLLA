@@ -4,6 +4,8 @@ class FacebookEventIdValidationService
   end
 
   def perform
-    yield if block_given?
+    uri = URI(@url)
+    response = Net::HTTP.get(uri)
+    response
   end
 end
