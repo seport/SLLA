@@ -4,7 +4,7 @@ A simple protest calendar for the Los Angeles area. [Visit the site here.](http:
 Want to contribute? We meet every Wednesday night! Ask for an invitation in the Hack For LA Slack channel.
 
 ## Setting Up For Local Development
-1. If you don't have Ruby already installed (IE you are not on a mac), install Ruby 2.2.7
+1. If you don't have Ruby already installed (IE you are not on a mac), install Ruby 2.4
 1. Install Rails 5.1.4+
 1. Fork the repo
 1. Clone your forked repo
