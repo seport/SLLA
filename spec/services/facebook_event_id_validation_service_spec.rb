@@ -21,14 +21,23 @@ describe FacebookEventIdValidationService do
       end
     end
 
-    # context "with invalid id" do
-    #   let(:unsuccessful_validation) do
-    #     described_class.new(url: "BAD_URL").perform
-    #   end
-    #
-    #   it "throws a validation error" do
-    #     expect(unsuccessful_validation).to raise_error(ValidationError)
-    #   end
-    # end
+    context "with invalid id" do
+      let(:unsuccessful_validation) do
+        BAD_URL = "https://graph.facebook.com/v2.12/134236613927952"
+        validation_service = described_class.new(BAD_URL)
+        stub_request(:get, "https://graph.facebook.com/v2.12/134236613927952")
+                   .with(headers: {
+                      'Accept' => '*/*',
+                      'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+                      'Host' => 'graph.facebook.com',
+                      'User-Agent'=>'Ruby'
+                    }).to_return(status: 404, body: '{"error": {}}', headers: {})
+        validation_service.perform
+      end
+
+      it "returns false" do
+        expect(unsuccessful_validation).to eq(false)
+      end
+    end
   end
 end
