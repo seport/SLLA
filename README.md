@@ -12,10 +12,10 @@ Want to contribute? We meet every Wednesday night! Ask for an invitation in the 
     b. Install for windows
         https://www.docker.com/docker-windows
 2. Run docker file (via command line)
-    1. docker run -it -p 3000:3000 chrisdower/slla:latest
+    1. docker run -it -p 3000:3000 -v $($PATH_TO_LOCAL_CODE):/app:rw chrisdower/slla:latest
         This runs it as an interactive session
     2. It can also be run detached
-        docker run -d -p 3000:3000 chrisdower/slla:latest
+        docker run -d -p 3000:3000 -v $($PATH_TO_LOCAL_CODE):/app:rw chrisdower/slla:latest
     3. The site can be accessed at localhost:3000
 ## Setting up locally without Docker 
 1. If you don't have Ruby already installed (IE you are not on a mac), install Ruby 2.4
