@@ -4,14 +4,19 @@ describe FacebookEventIdValidationService do
   describe "#perform" do
     context "with valid id" do
       let(:successful_validation) do
+<<<<<<< HEAD
         validation_service = FacebookEventIdValidationService.new("https://graph.facebook.com/v2.12/1234567890")
         stub_request(:get, "https://graph.facebook.com/v2.12/1234567890")
+=======
+        validation_service = described_class.new("https://graph.facebook.com/v2.12/134236613927951")
+        stub_request(:get, "https://graph.facebook.com/v2.12/134236613927951")
+>>>>>>> Add specs to event model for faccebook validation service.
                    .with(headers: {
                       'Accept' => '*/*',
                       'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
                       'Host' => 'graph.facebook.com',
                       'User-Agent'=>'Ruby'
-                    }).to_return(status: 200, body: '{"id": 1234567890, "name": "My Event"}', headers: {})
+                    }).to_return(status: 200, body: '{"id": 134236613927951, "name": "My Event"}', headers: {})
         validation_service.perform
       end
 

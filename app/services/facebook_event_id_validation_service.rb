@@ -1,6 +1,6 @@
 class FacebookEventIdValidationService
-  def initialize(url)
-    @url = url
+  def initialize(id)
+    @url = "https://graph.facebook.com/v2.12/#{id}"
   end
 
   def perform

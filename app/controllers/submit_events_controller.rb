@@ -4,6 +4,8 @@ class SubmitEventsController < ApplicationController
   end
   def create
     @event = Event.new(event_params)
+    @event.parse_fb_id
+    @event.validate_facebook_event
     if @event.save
       redirect_to '/submit'
     else
