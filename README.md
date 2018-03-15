@@ -6,10 +6,14 @@ Want to contribute? We meet every Wednesday night! Ask for an invitation in the 
 ## Setting Up For Local Development
 
 ## Setting up to run in docker 
-1. Install docker 
+1. Install docker
+
     a. Install for OSX
+        
         https://docs.docker.com/docker-for-mac/install/
+        
     b. Install for windows
+        
         https://www.docker.com/docker-windows
 2. Run docker file (via command line)
     1. docker run -it -p 3000:3000 chrisdower/slla:latest
