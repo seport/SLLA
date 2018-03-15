@@ -16,11 +16,10 @@ Want to contribute? We meet every Wednesday night! Ask for an invitation in the 
         
       https://www.docker.com/docker-windows
 2. Run docker file (via command line)
-    1. docker run -it -p 3000:3000 chrisdower/slla:latest
-        This runs it as an interactive session
-    2. It can also be run detached
-        docker run -d -p 3000:3000 chrisdower/slla:latest
-    3. The site can be accessed at localhost:3000
+    1. git clone -b (branch) https://github.com/<YOUR USERNAME>/SLLA.git ~/Source/SLLA
+    2. To run interactive: docker run -it -p 3000:3000 -v ~/Source/SLLA:/app:rw chrisdower/slla:latest
+    3. To run detached: docker run -d -p 3000:3000 -v ~/Source/SLLA:/app:rw chrisdower/slla:latest
+    4. The site can be accessed at localhost:3000
 ## Setting up locally without Docker 
 1. If you don't have Ruby already installed (IE you are not on a mac), install Ruby 2.4
 1. Install Rails 5.1.4+
