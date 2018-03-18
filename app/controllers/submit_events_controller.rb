@@ -5,7 +5,8 @@ class SubmitEventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-      redirect_to '/submit'
+      flash[:success] = "Your event is awaiting moderation."
+      redirect_to submit_path
     else
       render 'index'
     end
