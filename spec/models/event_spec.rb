@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Event do
   describe "#validate_facebook_event" do 
-    it "should throw invalid record error on unsuccessful facebook validation" do
+    it "should populate errors array when an event is invalid" do
       stub_request(:get, "https://graph.facebook.com/v2.12/134236613927952")
       .with(headers: {
         'Accept' => '*/*',
@@ -11,9 +11,8 @@ describe Event do
         'User-Agent'=>'Ruby'
       }).to_return(status: 404, body: '{"error": {}}', headers: {})
       event = Event.new(fb_id: '134236613927952')
-      expect do
-        event.validate_facebook_event
-      end.to raise_error(ActiveRecord::RecordInvalid)
+      event.valid?
+      expect(event.errors[:fb_id]).to include("This facebook event isn't available.")
     end
 
     it "should returns nil on successful facebook validation" do
@@ -25,13 +24,14 @@ describe Event do
          'User-Agent'=>'Ruby'
        }).to_return(status: 200, body: '{"id": 134236613927951, "name": "My Event"}', headers: {})
       event = Event.new(fb_id: '134236613927951')
-      expect(event.validate_facebook_event).to_not be
+      event.valid?
+      expect(event.errors[:fb_id]).to be_empty
     end
   end
 
   describe "#parse_fb_id" do
     it "should set facebook id" do
-      event = Event.new(fb_id: "http://facebook.com/events/123456789012345")
+      event = Event.new(fb_id: "123456789012345")
       event.parse_fb_id
       expect(event.fb_id).to eq("123456789012345")
     end
