@@ -8,6 +8,7 @@ class SubmitEventsController < ApplicationController
       flash[:success] = "Your event is awaiting moderation."
       redirect_to submit_path
     else
+      flash[:error] = "That event is not available."
       render 'index'
     end
   end

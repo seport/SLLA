@@ -36,6 +36,8 @@ describe SubmitEventsController do
       it "displays a flash message regarding the bad event given" do
         stub_request(:get, "https://graph.facebook.com/v2.12/134236613927952")
           .to_return(status: 404, body: '{"error": {}}')
+        post :create, params: { event: { fb_url: "facebook.com/events/134236613927952" } }
+        expect(flash[:error]).to be_present
       end
     end
   end

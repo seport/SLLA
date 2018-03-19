@@ -1,11 +1,6 @@
-<% if @event.errors.any? %>
-  <div class="alert failure pre">
-     <p>
-      <span class="closealert">X</span>
-      <span class="message">Oops! It looks like your link isn't formatted correctly. Make sure it's a valid link to a facebook event.</span>
-    </p>
-  </div>
-<% end %>
+<%= render "shared/errors" if flash[:error] %>
+<%= render "shared/success" if flash[:success] %>
+
 
 <h1>Submit</h1>
 

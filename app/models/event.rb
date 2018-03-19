@@ -7,6 +7,7 @@ class Event < ApplicationRecord
   validate :validate_facebook_event
 
   def validate_facebook_event
+    return if !errors.empty?
     valid_event = FacebookEventIdValidationService.new(fb_id).perform
     errors.add(:fb_url, "This facebook event isn't available.") unless valid_event 
     nil
