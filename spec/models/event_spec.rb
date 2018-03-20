@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Event do
   describe "#validate_facebook_event" do 
     it "should populate errors array when an event is invalid" do
-      stub_request(:get, "https://graph.facebook.com/v2.12/134236613927952")
+      stub_request(:get, "https://graph.facebook.com/v2.12/134236613927952?access_token=#{ENV['FB_TOKEN']}")
       .with(headers: {
         'Accept' => '*/*',
         'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
@@ -16,7 +16,7 @@ describe Event do
     end
 
     it "should returns nil on successful facebook validation" do
-      stub_request(:get, "https://graph.facebook.com/v2.12/134236613927951")
+      stub_request(:get, "https://graph.facebook.com/v2.12/134236613927951?access_token=#{ENV['FB_TOKEN']}")
       .with(headers: {
          'Accept' => '*/*',
          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',

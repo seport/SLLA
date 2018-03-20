@@ -11,7 +11,7 @@ describe SubmitEventsController do
   describe "POST create" do
     context "with valid facebook event" do
       before do
-        stub_request(:get, "https://graph.facebook.com/v2.12/134236613927951")
+        stub_request(:get, "https://graph.facebook.com/v2.12/134236613927951?access_token=#{ENV['FB_TOKEN']}")
           .to_return(status: 200, body: '{"id": 134236613927951, "name": "My Event"}')
       end
 
@@ -34,7 +34,7 @@ describe SubmitEventsController do
 
     context "with invalid facebook event" do
       it "displays a flash message regarding the bad event given" do
-        stub_request(:get, "https://graph.facebook.com/v2.12/134236613927952")
+        stub_request(:get, "https://graph.facebook.com/v2.12/134236613927952?access_token=#{ENV['FB_TOKEN']}")
           .to_return(status: 404, body: '{"error": {}}')
         post :create, params: { event: { fb_url: "facebook.com/events/134236613927952" } }
         expect(flash[:error]).to be_present
