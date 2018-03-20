@@ -1,0 +1,72 @@
+#submit-events-page  {
+    width: 100%;
+
+    label {
+      display: inline-block;
+      text-align: right;
+    }
+  
+    div {
+      margin:auto;
+      width: 1000px;
+    }
+  
+    .alert.failure.pre {
+      background-color: #f2dede;
+      border-color: #ebccd1;
+      color: #a94442;
+  
+      p {
+        margin: 1px;
+      }
+  
+    }
+  
+    .closealert {
+      margin-left: 10px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  
+    form {
+      margin:auto;
+    }
+
+    #event_fb_url {
+        height:35px;
+        width:500px;
+        padding-right:100px;
+        border:2px solid #FF69B4;
+        border-radius: 5px;
+        font-size:20px;
+    }
+
+    #event_fb_url:disabled{
+        border: 2px solid #cccccc;
+    }
+
+    input[type=submit] {
+        text-align: center;
+        height:32px;
+        width:100px;
+        margin-left:-105px;
+        background: #FF69B4;
+        color: white;
+        border: 0px;
+        border-top-right-radius: 1px;
+        border-bottom-right-radius: 1px;
+        font-size:20px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    button:disabled {
+        background: #cccccc;
+    }
+
+    .field_with_errors {
+        display: inline;
+    }
+  }
+  
