@@ -1,7 +1,7 @@
 class Event < ApplicationRecord
   before_validation :format_fb_id
   validates :fb_id,
-            format: { with: /\d+/i, message: 'Facebook id must contain only digits.'},
+            format: { with: /\d{15}/i, message: 'Please supply a facebook id with 15 characters.'},
             presence: { message: 'Please supply a facebook id number.' },
             uniqueness: { message: 'That facebook event has already been registed.' },
             on: :create
