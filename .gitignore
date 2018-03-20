@@ -4,6 +4,9 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Ignore the .env file
+.env
+
 # Ignore bundler config.
 /.bundle
 
@@ -16,6 +19,9 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+
+# Ignore developer specific settings
+.vscode
 
 /node_modules
 /yarn-error.log

@@ -28,6 +28,16 @@ Want to contribute? We meet every Wednesday night! Ask for an invitation in the 
     `git fetch upstream`
     
     `git merge upstream/<BRANCH NAME>`
+
+## Connecting to the facebook API
+Because we use the facebook open graph API to pull event data, you'll need to add a facebook token to the app for local development.
+
+1. [Follow these instructions to create a facebook app of your own.](https://developers.facebook.com/) (Choose "Website" for platform)
+1. Find your app id and app secret on your app's dashboard.
+1. Edit your .env file with the following:
+
+    `FB_TOKEN=<APP ID>|<APP SECRET>`
+
 ## Option 1: Setting up to run in docker
 1. Install docker [for OSX](https://docs.docker.com/docker-for-mac/install/) or [for windows](https://www.docker.com/docker-windows)
 1. Run docker file (via command line)
