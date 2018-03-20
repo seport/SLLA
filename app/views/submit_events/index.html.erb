@@ -12,8 +12,8 @@
     </ol>
 
     <%= form_for @event, url: submit_path  do |f| %>
-      <%= f.label :fb_url, "Facebook Event URL"  do %>
-          <%= f.text_field :fb_url %>
+      <%= f.label :fb_id, "Facebook Event URL"  do %>
+          <%= f.text_field :fb_id %>
       <% end %>
       <%= f.submit "Submit" %>
     <% end %>

@@ -14,6 +14,6 @@ class SubmitEventsController < ApplicationController
   end
   private
   def event_params
-    params.require(:event).permit(:fb_url)
+    params.require(:event).permit(:fb_id)
   end
 end

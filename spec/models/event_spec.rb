@@ -10,9 +10,9 @@ describe Event do
         'Host' => 'graph.facebook.com',
         'User-Agent'=>'Ruby'
       }).to_return(status: 404, body: '{"error": {}}', headers: {})
-      event = Event.new(fb_url: 'facebook.com/events/134236613927952')
+      event = Event.new(fb_id: 'facebook.com/events/134236613927952')
       event.valid?
-      expect(event.errors[:fb_url]).to include("This facebook event isn't available.")
+      expect(event.errors[:fb_id]).to include("This facebook event isn't available.")
     end
 
     it "should returns nil on successful facebook validation" do
@@ -23,9 +23,9 @@ describe Event do
          'Host' => 'graph.facebook.com',
          'User-Agent'=>'Ruby'
        }).to_return(status: 200, body: '{"id": 134236613927951, "name": "My Event"}', headers: {})
-      event = Event.new(fb_url: 'facebook.com/events/134236613927951')
+      event = Event.new(fb_id: 'facebook.com/events/134236613927951')
       event.valid?
-      expect(event.errors[:fb_url]).to be_empty
+      expect(event.errors[:fb_id]).to be_empty
     end
   end
 end

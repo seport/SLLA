@@ -15,7 +15,7 @@ describe SubmitEventsController do
           .to_return(status: 200, body: '{"id": 134236613927951, "name": "My Event"}')
       end
 
-      subject { post :create, params: { event: { fb_url: "facebook.com/events/134236613927951" } } } 
+      subject { post :create, params: { event: { fb_id: "facebook.com/events/134236613927951" } } } 
 
       it "saves the new facebook event" do
         subject
@@ -36,7 +36,7 @@ describe SubmitEventsController do
       it "displays a flash message regarding the bad event given" do
         stub_request(:get, "https://graph.facebook.com/v2.12/134236613927952?access_token=#{ENV['FB_TOKEN']}")
           .to_return(status: 404, body: '{"error": {}}')
-        post :create, params: { event: { fb_url: "facebook.com/events/134236613927952" } }
+        post :create, params: { event: { fb_id: "facebook.com/events/134236613927952" } }
         expect(flash[:error]).to be_present
       end
     end

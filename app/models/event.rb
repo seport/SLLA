@@ -1,6 +1,7 @@
 class Event < ApplicationRecord
-  validates :fb_url,
-            format: { with: /facebook.com\/events\/\d+[\/]?/i, message: 'Please supply a facebook id with 15 characters.'},
+  before_validation :format_fb_id
+  validates :fb_id,
+            format: { with: /\d+/i, message: 'Facebook id must contain only digits.'},
             presence: { message: 'Please supply a facebook id number.' },
             uniqueness: { message: 'That facebook event has already been registed.' },
             on: :create
@@ -8,15 +9,19 @@ class Event < ApplicationRecord
 
   def validate_facebook_event
     return if !errors.empty?
-    valid_event = FacebookEventIdValidationService.new(fb_id).perform
-    errors.add(:fb_url, "This facebook event isn't available.") unless valid_event 
+    valid_event = FacebookEventIdValidationService.new(self.fb_id).perform
+    errors.add(:fb_id, "This facebook event isn't available.") unless valid_event 
     nil
   end
 
   private
 
-  def fb_id
-    match = /facebook.com\/events\/(?<fb_id>\d+)/.match(self.fb_url)
-    match[:fb_id]
+  def format_fb_id
+    match = /facebook.com\/events\/(?<fb_id>\d+)/.match(self.fb_id)
+    if match.present? then
+      self.fb_id = match[:fb_id]
+    else
+      errors.add(:fb_id, "Please submit a facebook link.") unless match.present?
+    end
   end
 end
