@@ -20,7 +20,7 @@ I need your help! Just come talk to us at the hack night.
 
 ## Setting Up For Local Development
 
-## Cloning this repo
+### Cloning this repo
 1. Fork the repo
 1. Clone your forked repo
 
@@ -37,14 +37,14 @@ I need your help! Just come talk to us at the hack night.
 1. Checkout the `rails` branch
 
     `git checkout --track origin/rails`
-## Pulling From This Repository
+### Pulling From This Repository
 1. When you need to pull code from this repository, do it like this!
 
     `git fetch upstream`
     
     `git merge upstream/<BRANCH NAME>`
 
-## Connecting to the facebook API
+### Connecting to the facebook API
 Because we use the facebook open graph API to pull event data, you'll need to add a facebook token to the app for local development.
 
 1. [Follow these instructions to create a facebook app of your own.](https://developers.facebook.com/) (Choose "Website" for platform)
@@ -53,13 +53,15 @@ Because we use the facebook open graph API to pull event data, you'll need to ad
 
     `FB_TOKEN=<APP ID>|<APP SECRET>`
 
-## Option 1: Setting up to run in docker
+### Running the app
+
+#### Option 1: Setting up to run in docker
 1. Install docker [for OSX](https://docs.docker.com/docker-for-mac/install/) or [for windows](https://www.docker.com/docker-windows)
 1. Run docker file (via command line)
     1. To run interactive: docker run -it -p 3000:3000 -v path/to/SLLA:/app:rw chrisdower/slla:latest
     1. To run detached: docker run -d -p 3000:3000 -v path/to/SLLA:/app:rw chrisdower/slla:latest
 1. The site can be accessed at localhost:3000
-## Option 2: Setting up locally without Docker
+#### Option 2: Setting up locally without Docker
 1. If you don't have Ruby already installed (IE you are not on a mac), install Ruby 2.4
 1. Install Rails 5.1.4+
 1. Navigate to the SLLA folder
