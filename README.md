@@ -3,6 +3,21 @@
 A simple protest calendar for the Los Angeles area. [Visit the site here.](http://stayloudla.com/)
 Want to contribute? We meet every Wednesday night! Ask for an invitation in the Hack For LA Slack channel.
 
+## Contributing to this Project
+There are several major ways you can contribute to this project!
+
+### Everyone!
+Whether you're a developer, designer, both, neither, etc, you can contribute by checking out the [question](https://github.com/seport/SLLA/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion) tag! These are non-technical issues about the direction of the app. We want your input! Please provide your opinions by commenting on the issue at hand.
+
+### Designers
+If you are a designer, we need designs! Check out the [needs design](https://github.com/seport/SLLA/issues?q=is%3Aissue+is%3Aopen+label%3A%22needs+design%22) tag in the issues, and wireframe or mockup to your heart's content!
+
+### Developers
+If you are a developer, follow the local development setup instructions below, and pick up a ticket from the To Do section of the [project board](https://github.com/seport/SLLA/projects/1).
+
+### Project Managers
+I need your help! Just come talk to us at the hack night.
+
 ## Setting Up For Local Development
 
 ## Cloning this repo
