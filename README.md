@@ -58,8 +58,14 @@ Because we use the facebook open graph API to pull event data, you'll need to ad
 #### Option 1: Setting up to run in docker
 1. Install docker [for OSX](https://docs.docker.com/docker-for-mac/install/) or [for windows](https://www.docker.com/docker-windows)
 1. Run docker file (via command line)
-    1. To run interactive: docker run -it -p 3000:3000 -v path/to/SLLA:/app:rw chrisdower/slla:latest
-    1. To run detached: docker run -d -p 3000:3000 -v path/to/SLLA:/app:rw chrisdower/slla:latest
+    1. To run interactive: 
+
+         `docker run -it -p 3000:3000 -v <PATH TO THE SLLA FOLDER>:/app:rw chrisdower/slla:latest`
+
+       (you probably want to run it interactively)
+    1. To run detached: 
+
+         `docker run -d -p 3000:3000 -v <PATH TO THE SLLA FOLDER>:/app:rw chrisdower/slla:latest`
 1. The site can be accessed at localhost:3000
 #### Option 2: Setting up locally without Docker
 1. If you don't have Ruby already installed (IE you are not on a mac), install Ruby 2.4
