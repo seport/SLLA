@@ -70,7 +70,7 @@ Because we use the facebook open graph API to pull event data, you'll need to ad
     *HINT: If you need help finding the path to your folder and you're using a mac, here is a good tutorial for beginners! 🎉[http://www.ee.surrey.ac.uk/Teaching/Unix/](http://www.ee.surrey.ac.uk/Teaching/Unix/)*
     
     *We are still looking for a good windows tutorial.*
-1. The site can be accessed at localhost:3000
+1. The site can be accessed at [localhost:3000](http://localhost:3000)
 #### Option 2: Setting up locally without Docker
 1. If you don't have Ruby already installed (IE you are not on a mac), install Ruby 2.4
 1. Install Rails 5.1.4+
