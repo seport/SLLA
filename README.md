@@ -58,11 +58,9 @@ Because we use the facebook open graph API to pull event data, you'll need to ad
 #### Option 1: Setting up to run in docker
 1. Install docker [for OSX](https://docs.docker.com/docker-for-mac/install/) or [for windows](https://www.docker.com/docker-windows)
 1. Run docker file (via command line)
-    1. To run interactive: 
+    1. To run interactive: (you probably want to run it interactively)
 
          `docker run -it -p 3000:3000 -v <PATH TO THE SLLA FOLDER>:/app:rw chrisdower/slla:latest`
-
-       (you probably want to run it interactively)
     1. To run detached: 
 
          `docker run -d -p 3000:3000 -v <PATH TO THE SLLA FOLDER>:/app:rw chrisdower/slla:latest`
